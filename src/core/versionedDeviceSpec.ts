@@ -1,4 +1,4 @@
-///<reference path="../utils/index.ts" />
+///<reference path="../utils/index.m.ts" />
 
 namespace core {
   export class VersionedDeviceSpec extends utils.DeviceSpec {

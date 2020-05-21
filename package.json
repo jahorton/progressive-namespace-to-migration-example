@@ -4,7 +4,7 @@
   "description": "This repo explores the process of converting namespace-based TS code to module-based in a progressive manner.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p src/tsconfig.json",
+    "build": "tsc -p src/tsconfig.module.json && tsc -p src/tsconfig.json",
     "test": "mocha --recursive tests"
   },
   "repository": {

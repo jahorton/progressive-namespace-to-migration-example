@@ -1,30 +1,32 @@
 var assert = require('chai').assert;
-let utils = require('../dist').utils;
+
+// Verifies that we can access Version directly from the base-level module import file.
+let Version = require('../dist/utils/index.m').Version;
 
 describe('Version Logic', function() {
   it('Should provide a default, fallback value when nothing is specified', function() {
-    var fallback = new utils.Version(undefined);
-    assert.isTrue(fallback.equals(utils.Version.FIRST_ALPHA));
+    var fallback = new Version(undefined);
+    assert.isTrue(fallback.equals(Version.FIRST_ALPHA));
   });
 
   it('Should properly process a simple major.minor version string.', function() {
-    var version = new  utils.Version("1.2");
+    var version = new Version("1.2");
     assert.equal(version.major, 1);
     assert.equal(version.minor, 2);
   });
 
   it('Should handle long/deep version specifications.', function() {
-    var version = new  utils.Version("1.2.3.4.5.6");
+    var version = new Version("1.2.3.4.5.6");
     assert.equal(version.components.length, 6);
     assert.equal(version.major, 1);
     assert.equal(version.minor, 2);
   });
 
   it('Should properly compare two versions.', function() {
-    var v9_0_1 = new utils.Version("9.0.1");
-    var v9_1_0 = new utils.Version("9.1.0");
-    var v10_0 = new utils.Version("10.0");
-    var v10_0_0 = new utils.Version("10.0.0");
+    var v9_0_1 = new Version("9.0.1");
+    var v9_1_0 = new Version("9.1.0");
+    var v10_0 = new Version("10.0");
+    var v10_0_0 = new Version("10.0.0");
 
     // "Precede" checks
     assert.equal(v9_0_1.compareTo(v9_1_0), -1);
