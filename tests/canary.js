@@ -1,6 +1,6 @@
 // let assert = require('chai').assert;
 // let core = require("../dist").core;
-// //let utils = require("../dist").utils;
+// let utils = require("../dist").utils;
 
 // describe.skip('Integration Test', function() {
 //   it('osIsLatestVersion', function() {
