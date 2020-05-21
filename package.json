@@ -1,0 +1,30 @@
+{
+  "name": "progressive-namespace-to-migration-example",
+  "version": "1.0.0",
+  "description": "This repo explores the process of converting namespace-based TS code to module-based in a progressive manner.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahorton/progressive-namespace-to-migration-example.git"
+  },
+  "keywords": [
+    "typescript",
+    "namespaces",
+    "modules",
+    "progressive",
+    "conversion"
+  ],
+  "author": "Joshua A. Horton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jahorton/progressive-namespace-to-migration-example/issues"
+  },
+  "homepage": "https://github.com/jahorton/progressive-namespace-to-migration-example#readme",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
