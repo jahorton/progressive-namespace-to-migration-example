@@ -4,7 +4,7 @@
   "description": "This repo explores the process of converting namespace-based TS code to module-based in a progressive manner.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p src/tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/jahorton/progressive-namespace-to-migration-example#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
     "typescript": "^3.9.3"
   }
 }
