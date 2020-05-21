@@ -5,13 +5,15 @@
     "outDir": "../dist/",
     "inlineSources": true,
     "sourceMap": true,
-    "declaration": true,
+    "declaration": false,
     "target": "es5",
     "types": ["node"],
     "lib": ["es6"],
     "outFile": "../dist/index.js"
   },
   "files": [
+    "../dist/intermediate/module_bundle.d.ts",
+    "../dist/intermediate/module_bundle.js",
     "index.ts"
   ],
   "references": [

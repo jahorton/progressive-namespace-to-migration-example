@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
     "composite": true,
     "module": "commonjs",
-    "outDir": "../dist",
+    "outDir": "../dist/intermediate",
     "inlineSources": true,
     "sourceMap": true,
     "declaration": true,

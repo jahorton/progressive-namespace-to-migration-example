@@ -1,7 +1,13 @@
 var assert = require('chai').assert;
 
 // Verifies that we can access Version directly from the base-level module import file.
-let Version = require('../dist/utils/index.m').Version;
+let Version = require('../dist').utils.Version;
+
+// // Alternatively, requires the module_bundle, which auto-exports the namespace.
+// // We can't require the bundle, as it's been webpack'd and thus doesn't do actual module exports.
+// require('../dist/intermediate/module_bundle');
+// let Version = utils.Version;
+
 
 describe('Version Logic', function() {
   it('Should provide a default, fallback value when nothing is specified', function() {
