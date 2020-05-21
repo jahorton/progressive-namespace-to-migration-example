@@ -7,7 +7,7 @@
     "sourceMap": true,
     "declaration": true,
     "target": "es5",
-    "types": [],
+    "types": ["node"],
     "lib": ["es6"],
     "outFile": "../dist/index.js"
   },

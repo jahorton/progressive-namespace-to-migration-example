@@ -18,7 +18,7 @@ namespace core {
       this.osVersion = osVersion;
     }
 
-    osIsLatestVersion(): boolean {
+    get osIsLatestVersion(): boolean {
       switch(this.OS) {
         case utils.OperatingSystem.Windows:
           return this.osVersion.equals(new utils.Version("10.0.1909"));
