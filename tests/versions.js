@@ -1,5 +1,13 @@
 var assert = require('chai').assert;
-let utils = require('../dist').utils;
+
+// Verifies that we can access Version directly from the base-level module import file.
+let Version = require('../dist').utils;
+
+// // Alternatively, requires the module_bundle, which auto-exports the namespace.
+// // We can't require the bundle, as it's been webpack'd and thus doesn't do actual module exports.
+// require('../dist/intermediate/module_bundle');
+// let Version = utils.Version;
+
 
 describe('Version Logic', function() {
   it('Should provide a default, fallback value when nothing is specified', function() {
@@ -8,13 +16,13 @@ describe('Version Logic', function() {
   });
 
   it('Should properly process a simple major.minor version string.', function() {
-    var version = new  utils.Version("1.2");
+    var version = new utils.Version("1.2");
     assert.equal(version.major, 1);
     assert.equal(version.minor, 2);
   });
 
   it('Should handle long/deep version specifications.', function() {
-    var version = new  utils.Version("1.2.3.4.5.6");
+    var version = new utils.Version("1.2.3.4.5.6");
     assert.equal(version.components.length, 6);
     assert.equal(version.major, 1);
     assert.equal(version.minor, 2);

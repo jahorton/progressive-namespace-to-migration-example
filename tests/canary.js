@@ -1,4 +1,5 @@
 let assert = require('chai').assert;
+
 let core = require("../dist").core;
 let utils = require("../dist").utils;
 

@@ -1,5 +1,3 @@
-///<reference path="../utils/index.ts" />
-
 namespace core {
   export class VersionedDeviceSpec extends utils.DeviceSpec {
     private browserVersion: utils.Version;

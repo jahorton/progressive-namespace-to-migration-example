@@ -4,7 +4,7 @@
   "description": "This repo explores the process of converting namespace-based TS code to module-based in a progressive manner.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p src/tsconfig.json",
+    "build": "webpack --config src/webpack.bundle.config.js && tsc -p src/tsconfig.json",
     "test": "mocha --recursive tests"
   },
   "repository": {
@@ -27,7 +27,11 @@
   "devDependencies": {
     "@types/node": "^14.0.4",
     "chai": "^4.2.0",
+    "dts-bundle-webpack": "^1.0.2",
     "mocha": "^7.1.2",
-    "typescript": "^3.9.3"
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
